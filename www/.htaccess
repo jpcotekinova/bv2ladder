@@ -1,0 +1,27 @@
+# Disallow directior indexing
+Options -Indexes 
+
+# Disable some php input filtering (I've taken care of that)
+php_value magic_quotes_gpc off
+
+# Redirecting some static requests to the static folder
+RewriteEngine  on
+#RewriteRule ^favicon\.ico$ /static/favicon.ico
+RewriteRule ^robots\.txt$ /static/robots.txt
+RewriteRule ^bv2\.db$ /static/bv2.db
+RewriteRule ^friends$ /requests/friends.php?action=getfriends
+
+# Denying access to some files from the web
+<FilesMatch "\.(sql|txt)$">  
+  order allow,deny
+  deny from all
+</FilesMatch>
+<FilesMatch "^robots\.txt$">  
+  order allow,deny
+  Allow from all
+</FilesMatch>
+
+# Handling mislead clients
+ErrorDocument 404 /static/404.html
+
+AddType application/octet-stream .db

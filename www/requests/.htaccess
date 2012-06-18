@@ -1,0 +1,13 @@
+Options -Indexes
+
+<FilesMatch "\.txt$">  
+  order allow,deny
+  allow from all
+</FilesMatch>
+
+<FilesMatch "\.xml$">
+ForceType 'text/plain'
+</FilesMatch>
+
+RewriteEngine  on
+RewriteRule ^(.*)\.xml\.txt$ $1.xml

@@ -1,0 +1,9 @@
+Order deny,allow
+Allow from all
+
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ([0123456789]+) img.php?honestly_redirected&id=$1 [QSA,L]
+
+RewriteRule ^(.+)\.jpg$  /userbars/$1.png [R=301,NC,QSA,L]

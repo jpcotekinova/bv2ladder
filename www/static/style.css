@@ -1,0 +1,362 @@
+ body {
+	width:100%;
+
+	background: #000;/* url("body.png");*/
+	background-attachment:fixed;
+	margin:0; padding:0;
+	color:white;
+	font-family: Tahoma;
+	}
+
+	a img {
+	border:0;
+	}
+
+	#main
+	{
+	padding:30px 10px 20px;
+	}
+
+	#body
+	{
+		width:950px;
+		margin:0 auto;
+
+
+	}
+	#left
+	{
+		float:left;
+		margin:0; padding:0;
+		width:150px;
+		list-style:none;
+	}
+	#left li
+	{
+		font-weight:bold;
+		font-size:17px;
+		padding:7px 20px;
+	}
+	#left li a { text-decoration:none; color:white; outline:none;}
+	#left li a:hover { text-decoration:none; }
+	#left li.active
+	{
+		background-color:#292929;
+		-moz-border-radius: 5px 0 0 5px ;
+		-webkit-border-top-left-radius: 5px;
+		-webkit-border-bottom-left-radius: 5px;
+	}
+
+#communities
+{
+width:860px;
+margin:0 auto;
+padding:0 0 10px;
+overflow:hidden;
+font-size:9pt;
+}
+
+#communities ul
+{
+margin:0;
+float:right;
+overflow:hidden;
+}
+
+#communities li
+{
+float:left;
+padding-right: 25px;
+display:block;
+}
+
+#communities img
+{
+padding-right:6px;
+position:relative;
+top:9px;
+}
+
+#communities a,
+#left .misc a
+{
+color:#FFB90F;
+text-decoration:underline;
+display:block;
+padding:0 0 5px;
+}
+
+#communities a:hover,
+#left .misc a:hover
+{
+color:#fff;
+text-decoration:underline;
+}
+
+#left .misc
+{
+font-weight:normal;
+font-size:9pt;
+margin:20px 20px 0 0;
+border-top:1px solid #444;
+padding:10px 10px 0 0;
+}
+
+#left .misc strong
+{
+color:#FFB90F;
+}
+
+#left .misc div
+{
+padding:0 0 0 20px;
+}
+
+	#right
+	{
+		float:left;
+		width:700px;
+		background: url('opacity.png') repeat;
+		padding:10px 35px;
+
+		-moz-border-radius: 0 5px 5px 5px ;
+		-webkit-border-top-left-radius: 0;
+		-webkit-border-top-right-radius: 5px;
+		-webkit-border-bottom-left-radius: 5px;
+		-webkit-border-bottom-right-radius: 5px;
+
+	}
+	#right a { color:white; text-decoration:none; }
+	#right a:hover { text-decoration:underline; }
+	#right a.hiden{ color:#7F7F7F; }
+
+	table.onoflist
+	{
+		/*margin-left:10px;*/
+		color:#FAFAFA;
+		margin-top:20px;
+		font-size:12pt;
+		letter-spacing:0.7pt;
+		margin:20px auto;
+		border-collapse:collapse;
+
+	}
+	table.onoflist td{ width:125px;  padding:3px 3px 3px 3px;}
+	table.friends td {  width:160px;}
+
+	option, select , .addfriendinp { background-color:#595959; color:white; padding-bottom:0; }
+
+	#frsub, .goarrow { border:none; background-color:transparent; font-weight:bold; color:#FF9900; cursor:pointer;}
+	option, select{ outline:none;}
+
+	#bv
+	{
+		text-transform:uppercase;
+		font-size:48pt;
+		font-family:"Impact", condensed;
+		color:#3D3C3D;
+		float:right;
+
+	}
+
+	#right a.revoke { font-size:14px; color:gray; line-height:27px;}
+
+
+	.tblRating td {text-align:center; font-size:80%;}
+	.tblRating .leftAlign { text-align:left; padding-left:5px;}
+	.tblRating .name { font-size:90%; color:#FFFACD;}
+
+
+	#tooltipdiv
+	{
+		position:absolute;
+		display:none;
+		background: black;
+		color:white;
+		border: 4px solid gray;
+		padding:5px 8px;
+	}
+
+
+
+
+
+
+
+
+
+
+							/********************************************************
+							*********************** MAPS SECTION ********************
+							********************************************************/
+
+
+	.maptable .map { font-size:small; }
+	.maptable .map .head
+	{
+
+		background-color:#292929;
+		padding:3px 7px;
+				-moz-border-radius: 5px 5px 0 0 ;
+		-webkit-border-top-left-radius: 5px;
+		-webkit-border-top-right-radius: 5px;
+		font-family: "Trebuchet MS";
+	}
+	.maptable .map .head span
+	{
+		cursor:pointer;
+		font-weight:bold;
+		color:#FFB90F;
+		font-size:14pt;
+	}
+
+	.maptable .map .mapleftcell {float:left; padding:3px 7px; width:60%;}
+	.maptable .map .maprightcell { float:right; margin-right:1px;}
+
+	.maptable .map input.desc {background-color:#EEEEEE;}
+
+
+
+
+
+
+	/*
+	Paginator 3000
+	- idea by ecto (ecto.ru)
+	- coded by karaboz (karaboz.ru)
+	- minor chages by dzhus (dzhus.com)
+
+	HTML example
+	<div class="paginator" id="paginator_example">
+		<table>
+			<tr>
+				<td><span><strong>1</strong></span></td>
+				...
+				<td><span><a href="">3000</a></span></td>
+			</tr>
+			<tr>
+				<td colspan="">
+					<div class="scroll_bar">
+						<div class="scroll_trough"></div>
+						<div class="scroll_thumb">
+						</div>
+						<div class="current_page_mark"></div>
+					</div>
+				</td>
+
+			</tr>
+		</table>
+	</div>
+*/
+#right .paginator {
+	margin-top:60px;
+	font-size:1em;
+	width: 100%;
+}
+#right .paginator table {
+	border-collapse:collapse;
+	table-layout:fixed;
+	width:100%;
+}
+#right .paginator table td {
+	padding:0;
+	white-space:nowrap;
+	text-align:center;
+}
+
+#right .paginator table td a{
+  border: 1px solid black;
+  -moz-border-radius: 2px;
+	font-family: Georgia;
+	text-decoration: none;
+
+	background-color:#292929;
+}
+
+#right .paginator table td a:hover{
+	border-color: white; /*#3182C0;*/
+}
+
+#right .paginator span {
+	display:block;
+	padding:3px 0;
+	color:black;
+}
+#right .paginator span strong,
+#right .paginator span a {
+  -moz-border-radius: 2px;
+	padding:2px 6px;
+	font-size: .75em;
+}
+#right .paginator span strong {
+  cursor: default;
+	background:gold;
+	font-style:normal;
+	font-weight:bold;
+}
+#right .paginator .scroll_bar {
+	width:100%;	height:20px;
+	position:relative;
+	margin-top:10px;
+}
+#right .paginator .scroll_trough {
+	width:100%;	height:3px;
+	min-width: 20px;
+	background: #FFFFFF;
+	overflow:hidden;
+}
+
+#right .paginator .scroll_thumb {
+	position:absolute;
+	z-index:2;
+	margin-top: -4px;
+	width:19px; height:11px;
+	top:0; left:0;
+	font-size:1px;
+	/*background: url('/static/paginator/scroll_t.png') repeat-x;*/
+	background-color:#3D3C3D;
+	border:1px solid white;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+}
+
+#right .paginator .scroll_thumb .scroll_thumb_left{
+	float: left;
+	height: 11px;
+	width: 6px;
+	/*background: url('/static/paginator/scroll_u.png') no-repeat;*/
+}
+
+#right .paginator .scroll_thumb .scroll_thumb_right{
+	float: right;
+	height: 11px;
+	width: 6px;
+	/*background: url('/static/paginator/scroll_v.png') no-repeat;*/
+}
+
+#right .paginator .scroll_thumb .scroll_thumb_center{
+
+	float: left;
+}
+
+#right .paginator .current_page_mark {
+	position:absolute;
+	z-index:1;
+	top:0; left:0;
+	width:0; height:3px;
+	overflow:hidden;
+	background:#cddcff;
+}
+
+.fullsize .scroll_thumb {
+	display:none;
+}
+
+
+#right .paginator_pages {
+	width: 100%;
+	text-align: right;
+	font-size: 0.8em;
+	color: #3182C0;
+	margin-top: -10px;
+}
