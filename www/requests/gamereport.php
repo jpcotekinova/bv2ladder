@@ -117,7 +117,7 @@ $SAVE_REPORT = true;
 
 // Woot ?
 
-	error_reporting(0);
+	error_reporting(E_ALL & ~E_NOTICE & ~E_STRICT & ~E_DEPRECATED);
 	if(!isset($_REQUEST['report']) || $_REQUEST['action'] != 'report' ) die('fail');
 	//fputs(fopen('a.txt','w+'),print_r($_REQUEST,true)."\r\n\r\n");
 

@@ -4,8 +4,7 @@ session_start();
 header('Content-Type: text/html; charset=utf-8');
 
 
-if(isset($_SESSION['user']) AND  $_SESSION['user']['admin']) error_reporting(E_ALL);
-else error_reporting(0);
+error_reporting(E_ALL & ~E_NOTICE & ~E_STRICT & ~E_DEPRECATED);
 
 
 
@@ -153,7 +152,7 @@ else error_reporting(0);
 function goInside()
 {
 	if(isset($_GET['rd']) && $_GET['rd']=='fr')	header("Location: /friends");
-	else header("Location: /");
+	else header("Location: /ladder/index.php");
 	die();
 }
 

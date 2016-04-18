@@ -6,8 +6,8 @@ $show_all = array(
 	13009,
 );
 
-if(!isset($_GET['request'])) error_reporting(0);
-error_reporting(E_ALL);
+//if(!isset($_GET['request'])) error_reporting(0);
+error_reporting(E_ALL & ~E_NOTICE & ~E_STRICT & ~E_DEPRECATED);
 
 
 $isBrowser = (isset($_SERVER['HTTP_USER_AGENT']) && !empty($_SERVER['HTTP_USER_AGENT'])) && !isset($_GET['debug']);

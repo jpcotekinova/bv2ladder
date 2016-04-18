@@ -1,6 +1,5 @@
 <?php
 
-
 ##################################################################################
 #
 #   Baboviolent 2 default requests handler for merged client-server requests

@@ -42,7 +42,6 @@
 		<td width="135">Time</td>
 	</thead>
 
-	<?php  require_once 'includes/cache/stats_'.$region.'.htm'; ?>
 
 
 
